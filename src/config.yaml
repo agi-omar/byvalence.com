@@ -1,10 +1,10 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Valence Digital
+  site: 'https://byvalence.com'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+#  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
 # Default SEO metadata
 metadata:
@@ -23,7 +23,7 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
+    handle: '@omaroubari_'
     site: '@onwidget'
     cardType: summary_large_image
 
@@ -71,7 +71,7 @@ ui:
   tokens:
     default:
       fonts:
-        sans: InterVariable
+        sans: var(--ph-font-sans)
         serif: var(--ph-font-sans)
         heading: var(--ph-font-sans)
       colors:
