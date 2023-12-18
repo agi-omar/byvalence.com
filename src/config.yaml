@@ -8,9 +8,7 @@ site:
 
 # Default SEO metadata
 metadata:
-  title:
-    default: AstroWind
-    template: '%s — AstroWind'
+  title: Valence Digital
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
@@ -28,8 +26,8 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
-  textDirection: ltr
+  language: ar
+  textDirection: rtl
 
 apps:
   blog:
