@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
-import Logo from "~/components/Logo.astro";
+//import Logo from "~/components/Logo.astro";
 import ToggleTheme from "~/components/common/ToggleTheme.astro";
 import ToggleMenu from "~/components/common/ToggleMenu.astro";
 import Button from "~/components/ui/Button.astro"
@@ -70,13 +70,12 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
   >
     <div class:list={[{ "mr-0 rtl:mr-0 rtl:ml-0": position === "right" }, "flex justify-between"]}>
       <a class="flex items-center" href={getHomePermalink()}>
-        <Logo />
+        <img src="src/assets/images/logo.svg" width="135.82px"/>
       </a>
       <div class="flex items-center md:hidden">
         <ToggleMenu />
       </div>
-    </div>
-    <nav
+      <nav
       class="items-center w-full md:w-auto hidden md:flex text-default overflow-y-auto overflow-x-hidden md:overflow-y-visible md:overflow-x-auto md:mx-5"
       aria-label="Main navigation"
     >
@@ -122,7 +121,9 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
           ))
         }
       </ul>
-    </nav>
+      </nav>      
+    </div>
+
     <div
       class:list={[
         { "ml-auto rtl:ml-0 rtl:mr-auto": position === "left" },
