@@ -1,5 +1,7 @@
 ---
-
+import lightLogo from '~/assets/images/logo-light.svg'
 ---
-
-<img src="src/assets/images/logo.svg"/>
+<div class="self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+    <img class="block dark:hidden" src={lightLogo} alt="Your Logo" />
+    <img class="hidden dark:block" src={darkLogo} alt="Your Logo" />
+</div>
