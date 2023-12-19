@@ -24,11 +24,11 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px] h-screen border-b-4 not-prose" {...id ? { id } : {}}>
+<section class="relative md:-mt-[76px] h-screen not-prose" {...id ? { id } : {}}>
   <div class="absolute inset-0 h-full pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl h-full mx-auto px-16 sm:px-6">
     <!--<div class="pt-0 md:pt-[76px] pointer-events-none"></div> -->
-    <div class="flex items-center h-full py-auto border-b-4 md:py-20">
+    <div class="flex items-center h-full py-auto ">
       <div class="py-auto space-y-6 text-center max-w-5xl mx-auto">
         {
           tagline && (
@@ -41,7 +41,7 @@ const {
         {
           title && (
             <h1
-              class="text-6xl xl:text-8xl md:text-7xl font-bold leading-normal tracking-normal font-serif dark:text-gray-200"
+              class="text-6xl xl:text-8xl md:text-7xl font-bold leading-normal tracking-normal font-heading dark:text-gray-200"
               set:html={title}
             />
           )
