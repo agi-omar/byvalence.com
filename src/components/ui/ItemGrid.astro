@@ -11,6 +11,7 @@ const {
   panel: panelClass = '',
   title: titleClass = '',
   description: descriptionClass = '',
+  itemnumber: itemnumberClass = '',
   icon: defaultIconClass = 'text-primary',
   action: actionClass = '',
 } = classes;
@@ -30,18 +31,19 @@ const {
             : ''
         }`,
         containerClass
-      )}
+      )} dir="rtl"
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, description, itemnumber, icon, callToAction, classes: itemClasses = {} }) => (
         <div>
-          <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
-            <div class="flex justify-center">
+          <div class={twMerge('flex flex-col max-w-md', panelClass, itemClasses?.panel)}>
+            <div class="flex justify-start">
               {(icon || defaultIcon) && (
                 <Icon
                   name={icon || defaultIcon}
                   class={twMerge('w-7 h-7 mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
                 />
               )}
+              {itemnumber && <span class={twMerge('text-xl font-bold', itemnumberClass, itemClasses?.title)}>{itemnumber}</span>}
             </div>
             <div class="mt-0.5">
               {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
