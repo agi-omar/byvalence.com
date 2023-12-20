@@ -190,6 +190,13 @@ export interface ItemGrid {
   classes?: Record<string, string>;
 }
 
+export interface Carousel {
+  items?: Array<Item>;
+  columns?: number;
+  defaultIcon?: string;
+  classes?: Record<string, string>;
+}
+
 export interface Collapse {
   iconUp?: string;
   iconDown?: string;
