@@ -8,11 +8,7 @@ const {
   title = await Astro.slots.render("title"),
   subtitle = await Astro.slots.render("subtitle"),
   tagline = await Astro.slots.render("tagline"),
-  itemnumber = await Astro.slots.render("itemnumber"),
-  items = [],
-
-
-  defaultIcon,
+  image = await Astro.slots.render("image"),
 
   id,
   isDark = false,
@@ -34,13 +30,6 @@ const {
     classes={classes?.headline}
   />
   <Carousel
-    items={items}
-    defaultIcon={defaultIcon}
-    classes={{
-      container: "",
-      title: "md:text-4xl",
-      icon: "text-white bg-primary rounded-full w-10 h-10 p-2 md:w-12 md:h-12 md:p-3 mr-4 rtl:ml-4 rtl:mr-0",
-      ...((classes?.items as {}) ?? {}),
-    }}
+    image={image}
   />  
 </WidgetWrapper>

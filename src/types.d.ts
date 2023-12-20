@@ -194,6 +194,7 @@ export interface Carousel {
   items?: Array<Item>;
   columns?: number;
   defaultIcon?: string;
+  image?: string | unknown;
   classes?: Record<string, string>;
 }
 
