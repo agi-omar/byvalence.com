@@ -1,7 +1,8 @@
 ---
 import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
 import Headline from "~/components/ui/Headline.astro";
-import Carousel from "~/components/ui/Carousel.astro";
+//import Carousel from "~/components/ui/Carousel.astro";
+import Image from '~/components/common/Image.astro';
 import type { Gallery } from "~/types";
 
 const {
@@ -20,7 +21,7 @@ const {
 <WidgetWrapper
   id={id}
   isDark={isDark}
-  containerClass={`max-w-full mx-16 my-32 space-y-16 ${classes?.container ?? ""}`}
+  containerClass={`max-w-full overflow-clip space-y-16 ${classes?.container ?? ""}`}
   bg={bg}
 > 
   <Headline
@@ -29,7 +30,38 @@ const {
     tagline={tagline}
     classes={classes?.headline}
   />
-  <Carousel
-    image={image}
-  />  
+  <div aria-hidden="true" >
+    <div class="flex flex-row space-x-4">
+      <!--<Image
+        class="mx-auto rounded-md w-full"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        loading="eager"
+        width={1024}
+        height={576}
+        {...image}
+        src='~/assets/images/hero.png', alt='AstroWind Hero Image'
+      /> -->
+      <Image
+        class="rounded-lg w-full"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        loading="eager"
+        width={1120}
+        height={720}
+        {...image}
+        src='~/assets/images/cobalt 1.png', alt='صفحة هبوط برنامج إدارة أموال'
+      />
+      <Image
+        class="mx-auto rounded-md w-full"
+        widths={[400, 768, 1024, 2040]}
+        sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+        loading="eager"
+        width={1120}
+        height={720}
+        {...image}
+        src='~/assets/images/cobalt 2.png', alt='صفحة ميزات برنامج إدارة أموال'
+      />
+    </div>
+  </div>  
 </WidgetWrapper>
