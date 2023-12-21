@@ -71,8 +71,8 @@ ui:
   tokens:
     default:
       fonts:
-        sans: InterVariable
-        serif: var(--ph-font-sans)
+        sans: Graphik Arabic
+        serif: IBM Plex Sans Arabic
         heading: var(--ph-font-sans)
       colors:
         default: rgb(16 16 16)
