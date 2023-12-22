@@ -3,21 +3,14 @@ import { promises as fs } from 'fs';
 import { validateIconSet } from '@iconify/utils';
 
 (async () => {
-	// Load data from file
-	const data = JSON.parse(
-		await fs.readFile(
-			'./node_modules/@iconify-json/iconoir/icons.json',
-			'utf8'
-		)
-	);
+  // Load data from file
+  const data = JSON.parse(await fs.readFile('./node_modules/@iconify-json/iconoir/icons.json', 'utf8'));
 
-	// Validate data
-	const iconSet = validateIconSet(data);
+  // Validate data
+  const iconSet = validateIconSet(data);
 
-	// Count icons (simple calculation)
-	const count =
-		Object.keys(iconSet).length +
-		(iconSet.aliases ? Object.keys(iconSet.aliases).length : 0);
-	console.log(`Found ${count} icons`);
+  // Count icons (simple calculation)
+  const count = Object.keys(iconSet).length + (iconSet.aliases ? Object.keys(iconSet.aliases).length : 0);
+  console.log(`Found ${count} icons`);
 })();
 ---

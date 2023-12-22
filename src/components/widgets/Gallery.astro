@@ -1,36 +1,31 @@
 ---
-import WidgetWrapper from "~/components/ui/WidgetWrapper.astro";
-import Headline from "~/components/ui/Headline.astro";
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
 //import Carousel from "~/components/ui/Carousel.astro";
 import Image from '~/components/common/Image.astro';
-import type { Gallery } from "~/types";
+import type { Gallery } from '~/types';
 
 const {
-  title = await Astro.slots.render("title"),
-  subtitle = await Astro.slots.render("subtitle"),
-  tagline = await Astro.slots.render("tagline"),
-  image = await Astro.slots.render("image"),
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  image = await Astro.slots.render('image'),
 
   id,
   isDark = false,
   classes = {},
-  bg = await Astro.slots.render("bg"),
+  bg = await Astro.slots.render('bg'),
 } = Astro.props as Gallery;
 ---
 
 <WidgetWrapper
   id={id}
   isDark={isDark}
-  containerClass={`max-w-full overflow-clip space-y-16 ${classes?.container ?? ""}`}
+  containerClass={`max-w-full overflow-clip space-y-16 ${classes?.container ?? ''}`}
   bg={bg}
-> 
-  <Headline
-    title={title}
-    subtitle={subtitle}
-    tagline={tagline}
-    classes={classes?.headline}
-  />
-  <div aria-hidden="true" >
+>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline} />
+  <div aria-hidden="true">
     <div class="flex flex-row space-x-4">
       <!--<Image
         class="mx-auto rounded-md w-full"
@@ -50,7 +45,9 @@ const {
         width={1120}
         height={720}
         {...image}
-        src='~/assets/images/cobalt 1.png', alt='صفحة هبوط برنامج إدارة أموال'
+        src="~/assets/images/cobalt 1.png"
+        ,
+        alt="صفحة هبوط برنامج إدارة أموال"
       />
       <Image
         class="mx-auto rounded-md w-full"
@@ -60,8 +57,10 @@ const {
         width={1120}
         height={720}
         {...image}
-        src='~/assets/images/cobalt 2.png', alt='صفحة ميزات برنامج إدارة أموال'
+        src="~/assets/images/cobalt 2.png"
+        ,
+        alt="صفحة ميزات برنامج إدارة أموال"
       />
     </div>
-  </div>  
+  </div>
 </WidgetWrapper>

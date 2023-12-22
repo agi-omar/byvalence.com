@@ -16,7 +16,6 @@ module.exports = {
         serif: ['var(--aw-font-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading)', ...defaultTheme.fontFamily.serif],
       },
-
     },
   },
   plugins: [require('@tailwindcss/typography')],
