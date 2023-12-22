@@ -5,7 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 //import Note from '~/components/widgets/Note.astro';
 import HowItWorks from '~/components/widgets/HowItWorks.astro';
 import Gallery from '~/components/widgets/Gallery.astro';
-import { Icon } from 'astro-icon/components';
+import Icon from 'astro-icon/components';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -23,103 +23,100 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <div style="background-image: url('~/src/assets/images/bg.jpg');" class="bg-hero bg-no-repeat bg-cover bg-center">
-    <Hero
-      actions={[
-        {
-          variant: 'primary',
-          text: 'احجز موعد مكالمة',
-          href: '#',
-          target: '_blank',
-          //icon: 'tabler:download',
-        },
-      ]}
-      image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
-    >
-      <Fragment slot="title">
-        مواقع ويب خارقة تدفع <br />مشروعك للنمو الفائق
-      </Fragment>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'احجز موعد مكالمة',
+        href: '#',
+        target: '_blank',
+        //icon: 'tabler:download',
+      },
+      
+    ]}
+    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      مواقع ويب خارقة تدفع <br>مشروعك للنمو الفائق
+    </Fragment>
 
-      <Fragment slot="subtitle">
-        احصل على موقع ويب تفاعلي يزيد من انتشار مشروعك. وفر عناء وتكلفة البحث عن مصممين ومبرمجين موهوبين. ضعف معدل تحويل
-        زوار موقعك الى عملاء.
-      </Fragment>
-    </Hero>
+    <Fragment slot="subtitle">
+      احصل على موقع ويب تفاعلي يزيد من انتشار مشروعك. وفر عناء وتكلفة البحث عن مصممين ومبرمجين موهوبين. ضعف معدل تحويل زوار موقعك الى عملاء.
+    </Fragment>
+  </Hero>
 
-    <!-- Note Widget ******************* -->
+  <!-- Note Widget ******************* -->
 
-    <!--<Note /> -->
+  <!--<Note /> -->
 
-    <!-- HowItWorks Widget *************** -->
-    <HowItWorks
-      id="features"
-      tagline="آلية عملنا"
-      title="فريق عمل متكامل مختص لمشروعك بجزء من تكلفة التوظيف"
-      items={[
-        {
-          title: 'اشترك',
-          description: 'اشترك في الباقة المناسبة لاحتياجاتك وسيتم تخصيص قناة خاصة بك على التليغرام والتواصل معك فورا',
-          //icon: 'tabler:brand-tailwind',
-          itemnumber: '1',
-        },
-        {
-          title: 'اطلب',
-          description:
-            'سجل جميع طلباتك مع وصف عنها وسيتم التواصل معك والعمل عليها تباعا. احصل على تصميم أولي خلال 48 ساعة',
-          //icon: 'tabler:components',
-          itemnumber: '2',
-        },
-        {
-          title: 'عدل',
-          description: 'تمتع بعدد لا محدود من التعديلات حتى الوصول الى كامل رضاك. سيتم تطبيق العمل فور موافقتك عليه',
-          //icon: 'tabler:list-check',
-          itemnumber: '3',
-        },
-      ]}
-    />
+  <!-- HowItWorks Widget *************** -->
+  <HowItWorks
+    id="features"
+    tagline="آلية عملنا"
+    title="فريق عمل متكامل مختص لمشروعك بجزء من تكلفة التوظيف"
+    
+    items={[
+      {
+        title: 'اشترك',
+        description:
+          'اشترك في الباقة المناسبة لاحتياجاتك وسيتم تخصيص قناة خاصة بك على التليغرام والتواصل معك فورا',
+        //icon: 'tabler:brand-tailwind',
+        itemnumber: '1',
+      },
+      {
+        title: 'اطلب',
+        description:
+          'سجل جميع طلباتك مع وصف عنها وسيتم التواصل معك والعمل عليها تباعا. احصل على تصميم أولي خلال 48 ساعة',
+        //icon: 'tabler:components',
+        itemnumber: '2',
+      },
+      {
+        title: 'عدل',
+        description:
+          'تمتع بعدد لا محدود من التعديلات حتى الوصول الى كامل رضاك. سيتم تطبيق العمل فور موافقتك عليه',
+        //icon: 'tabler:list-check',
+        itemnumber: '3',
+      },
+    ]}
+  />
   </div>
-  <Gallery id="features" tagline="آلية عملنا" title="احلى تصميم ممكن تتخيله لموقعك" subtitle="blablabla" />
+  <Gallery
+    id="features"
+    tagline="آلية عملنا"
+    title="احلى تصميم ممكن تتخيله لموقعك"
+    subtitle="blablabla"
+  />
 
   <div class="max-w-full mx-16 my-32 space-y-16">
     <ul class="flex flex-col lg:grid gap-4 grid-cols-3 grid-row-6" dir="rtl">
       <li class="col-span-2 row-span-2 flex flex-col gap-y-6 py-16 pl-16 rounded-lg">
-        <h2
-          class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl text-indigo-950 sm:text-4xl"
-        >
-          مواقع أداءها عالي وتحمل بسرعة
-        </h2>
+        <h2 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl text-indigo-950 sm:text-4xl">مواقع أداءها عالي وتحمل بسرعة</h2>
         <p class="text-2xl text-muted">نستخدم احدث تقنيات البرمجة في مواقعنا لضمان أداءها العالي وسرعة تحميلها</p>
       </li>
       <li class="row-span-4 flex flex-col justify-end gap-y-2 bg-indigo-200 p-8 rounded-lg">
         <Icon name="tabler:3d-cube-sphere" class="w-16 h-16" />
-        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">
-          عرض محتوى اسرع
-        </h3>
+        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">عرض محتوى اسرع</h3>
         <p class="text-lg text-indigo-950">نستخدم احدث تقنيات البرمجة في مواقعنا لضمان أداءها العالي وسرعة تحميلها</p>
       </li>
       <li class="row-span-4 flex flex-col justify-end gap-y-2 bg-indigo-200 p-8 rounded-lg">
         <Icon name="tabler:3d-cube-sphere" class="w-16 h-16" />
-        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">
-          عرض محتوى اسرع
-        </h3>
+        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">عرض محتوى اسرع</h3>
         <p class="text-lg text-indigo-950">نستخدم احدث تقنيات البرمجة في مواقعنا لضمان أداءها العالي وسرعة تحميلها</p>
       </li>
       <li class="row-span-4 flex flex-col justify-end gap-y-2 bg-indigo-200 p-8 rounded-lg">
         <Icon name="tabler:3d-cube-sphere" class="w-16 h-16" />
-        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">
-          عرض محتوى اسرع
-        </h3>
+        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">عرض محتوى اسرع</h3>
         <p class="text-lg text-indigo-950">نستخدم احدث تقنيات البرمجة في مواقعنا لضمان أداءها العالي وسرعة تحميلها</p>
       </li>
       <li class="row-span-2 flex flex-col justify-end gap-y-2 bg-indigo-950 text-white p-8 rounded-lg">
         <Icon name="tabler:3d-cube-sphere" class="w-16 h-16" />
-        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">
-          عرض محتوى اسرع
-        </h3>
+        <h3 class="font-semibold leading-relaxed tracking-normal font-heading text-heading text-5xl sm:text-4xl">عرض محتوى اسرع</h3>
         <p class="text-lg text-white">نستخدم احدث تقنيات البرمجة في مواقعنا لضمان أداءها العالي وسرعة تحميلها</p>
       </li>
+      
     </ul>
   </div>
-
+  
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
