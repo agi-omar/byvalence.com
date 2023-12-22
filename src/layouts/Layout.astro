@@ -28,6 +28,11 @@ const { language, textDirection } = I18N;
 <!doctype html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css"
+    />
     <CommonMeta />
     <Favicons />
     <CustomStyles />
@@ -47,7 +52,7 @@ const { language, textDirection } = I18N;
 
     <style is:global>
       img {
-        content-visibility: auto;
+        content-visibility: visible;
       }
     </style>
   </body>
